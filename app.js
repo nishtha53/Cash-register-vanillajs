@@ -27,7 +27,8 @@ function checkBillValidation() {
     hideMessage();
     if (billAmount < 0 || !billAmount) {
         setMessage("Invalid bill amount. must be greater than 0");
-    } else {
+    } 
+    else {
         container.style.display = "block";
     }
 }
@@ -38,7 +39,11 @@ function checkCashValidation() {
     if (cashGiven == 0) {
         setMessage('do you wanna wash plates?');
         return false;
-    } else if (billAmount > cashGiven) {
+    } 
+    else if(billAmount==cashGiven){
+        setMessage("No amount should be returned!")
+    }
+    else if (billAmount > cashGiven) {
         setMessage("amount must be lesser than cash");
         return false;
     } else {
