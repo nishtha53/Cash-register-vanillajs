@@ -3,6 +3,7 @@ const message = document.querySelector('#message');
 const container = document.querySelector('.container');
 const noOfNotes = [2000, 500, 100, 20, 10, 5, 1];
 const nextButton = document.querySelector('#next');
+const table = document.querySelector("#table");
 var notes = document.querySelectorAll(".note");
 var cashGiven = 0;
 var billAmount = 0;
@@ -37,14 +38,15 @@ function checkCashValidation() {
     cashGiven = Number(inputCashGiven.value);
     hideMessage();
     if (cashGiven == 0) {
-        setMessage('do you wanna wash plates?');
+        setMessage("Amount cant be zero");
         return false;
     } 
     else if(billAmount==cashGiven){
-        setMessage("No amount should be returned!")
+        setMessage("No amount should be returned!");
+        table.style.display = "none";
     }
     else if (billAmount > cashGiven) {
-        setMessage("amount must be lesser than cash");
+        setMessage("Amount must be lesser than cash");
         return false;
     } else {
         return true;
