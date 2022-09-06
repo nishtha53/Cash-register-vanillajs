@@ -11,7 +11,7 @@ It will distribute how much amount of note is remaining to give in notes.
 - JavaScript
 
 # Please check attach screenshot
-
+<img src="mark10.png" alt="cash-register app">
 
 # Please check demo of app
 [Demo](https://cash-register-calculate.netlify.app/)
